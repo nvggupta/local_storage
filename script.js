@@ -6,7 +6,7 @@ const Fname = document.getElementById("Fname");
         const city = document.getElementById("city");
         const village = document.getElementById("village");
 
-       
+       document.addEventListener('DOMContentLoaded',()=>{
             if (!localStorage.getItem("First name")) {
                 let F = prompt("Enter First Name");
                 let L = prompt("Enter Last Name");
@@ -24,7 +24,7 @@ const Fname = document.getElementById("Fname");
                 localStorage.setItem("city", ci);
                 localStorage.setItem("Village", v);
             }
-
+        })
             Fname.textContent = localStorage.getItem("First name");
             Lname.textContent = localStorage.getItem("Last name");
             country.textContent = localStorage.getItem("country");
